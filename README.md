@@ -22,11 +22,10 @@ It's very easy to use it through `docker-compose` (**Recommend**).
 
 ```yaml
 # docker-compose.yml
-
 version: "3"
-services:
 
-  conquest:
+services:
+  ubuntu:
     image: zhonger/ubuntu:latest
     container_name: dev
     environment:
@@ -36,7 +35,7 @@ services:
     ports:
      - 22:22
     volumes:
-     - ~/web/test:/home/ubuntu/test
+     - /etc/localtime:/etc/localtime
     restart: always
 ```
 
@@ -46,7 +45,7 @@ docker-compose up -d
 
 ## More
 
-If you want to know more about the idea and details, you can refer to [《Docker 镜像构建之基础篇》](https://lisz.me/). (Sorry, it's only Chinese now. In the future, we will provide English version.)
+If you want to know more about the idea and details, you can refer to [《Docker 镜像构建之基础篇》](https://lisz.me/tech/docker/docker-build-begin.html). (Sorry, it's only Chinese now. In the future, we will provide English version.)
 
 ## 简介
 
@@ -70,11 +69,10 @@ If you want to know more about the idea and details, you can refer to [《Docker
 
 ```yaml
 # docker-compose.yml
-
 version: "3"
-services:
 
-  conquest:
+services:
+  ubuntu:
     image: zhonger/ubuntu:latest
     container_name: dev
     environment:
@@ -84,7 +82,7 @@ services:
     ports:
      - 22:22
     volumes:
-     - ~/web/test:/home/ubuntu/test
+     - /etc/localtime:/etc/localtime
     restart: always
 ```
 
@@ -94,4 +92,4 @@ docker-compose up -d
 
 ## 了解更多
 
-关于本镜像的更多思考和详细步骤，请访问 [《Docker 镜像构建之基础篇》](https://lisz.me/) 了解更多。
+关于本镜像的更多思考和详细步骤，请访问 [《Docker 镜像构建之基础篇》](https://lisz.me/tech/docker/docker-build-begin.html) 了解更多。
